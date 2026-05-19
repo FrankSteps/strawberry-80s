@@ -23,7 +23,17 @@ O **Berry OS** (Strawberry Operating System) é o software responsável por gere
 | **Áudio** | Buzzer (pino 49) |
 | **Interface** | Serial (9600 baud) |
 
----
+
+## 🎨 Estética & Inspiração
+
+O projeto foi inspirado na estética **Macintosh clássico (1984)**:
+- ✨ Monitor monocromático pequeno
+- ⌨️ Teclado vintage (calculadora)
+- 📟 Interface simplista e retrô
+- 🔔 Feedback sonoro das era 80
+
+Perfeito para aqueles que amam **retrocomputação** e **design vintage**! 🕰️
+
 
 ## 🚀 Funcionalidades
 
@@ -33,38 +43,25 @@ O **Berry OS** (Strawberry Operating System) é o software responsável por gere
 - ✅ Renderização em tempo real na TV (128x96)
 - ✅ Tela de informações do sistema (comando `->`)
 - ✅ Efeito de digitação com delay configurável
-- ✅ Gerenciamento de posição do cursor
 - ✅ Feedback sonoro (buzzer)
 - ✅ Limpeza de tela com `ON`/`OFF`
 - ✅ Suporte a funções de calculadora (%, /, +, -, ×, =, etc)
 
-### Teclas Especiais
+
+### KeyMap
 
 ```
-┌─────────────────────────────────┐
-│ OFF   EX   +/-    │    │    │    │
-├─────────────────────────────────┤
-│  %    /     9  8  7   MU   →    │  (info)
-│  -    ×     6  5  4   MR   GT   │
-│  =    +     3  2  1   M-   CE   │
-│  0    $     .  .  M+   ON       │
-└─────────────────────────────────┘
+┌──────────────────────────────┐
+│                 +/-  EX  OFF │
+├──────────────────────────────┤
+│  →   MU    7  8  9    /   %  │  
+│ GT   MR    4  5  6    ×   -  │
+│ CE   M-    1  2  3    +   =  │
+│ ON   M+    0  00 .    +   =  │
+└──────────────────────────────┘
 
-→  = Info/Status (mostra versão do SO)
-ON/OFF = Reset da tela
-```
-
----
-
-## 📦 Estrutura do Projeto
-
-```
-Strawberry_computer/
-├── strawberry/
-│   └── strawberry.ino          # Sistema operacional principal (Berry OS)
-├── keyTest/
-│   └── keyTest.ino             # Teste de leitura de teclado
-└── README.md
+→      : Info/Status (mostra versão do SO)
+ON/OFF : Reset da tela
 ```
 
 ### `strawberry.ino` - Berry OS Principal
@@ -81,7 +78,6 @@ O arquivo principal contém:
 
 Arquivo para testar a leitura da matriz de teclado em isolamento.
 
----
 
 ## 🛠️ Instalação e Uso
 
@@ -95,31 +91,22 @@ Arquivo para testar a leitura da matriz de teclado em isolamento.
 ### Setup
 
 1. **Instale a biblioteca TVout**:
-   ```
-   Sketch → Include Library → Manage Libraries
-   Procure por "TVout" e instale
-   ```
 
 2. **Abra o arquivo principal**:
    ```
    strawberry/strawberry.ino
    ```
-
 3. **Configure a placa**:
    - Ferramentas → Placa → Arduino Mega
    - Ferramentas → Porta → (selecione sua porta)
 
 4. **Faça upload**:
-   ```
-   Sketch → Upload (Ctrl+U)
-   ```
 
 5. **Pronto!** 🍓
    - A TV deve ligar
    - O buzzer emitirá 3 sons de confirmação
    - Digite na calculadora para ver os caracteres na TV
 
----
 
 ## 🎮 Como Usar
 
@@ -129,6 +116,7 @@ Arquivo para testar a leitura da matriz de teclado em isolamento.
 2. **Use `→`** (seta) para acessar a tela de informações do sistema
 3. **Use `ON` ou `OFF`** para limpar a tela
 4. O cursor avança automaticamente e quebra linha quando necessário
+
 
 ### Tela de Informações
 
@@ -150,7 +138,6 @@ You    : $user
 
 Pressione `→` novamente para voltar ao modo normal.
 
----
 
 ## 🔌 Pinagem Arduino
 
@@ -171,21 +158,9 @@ const byte rowPins[5] = {30, 33, 32, 34, 35};
 | 49 | Buzzer (áudio feedback) |
 | TX/RX | Serial (Debug a 9600 baud) |
 
----
+
 
 ## 📝 Detalhes Técnicos
-
-### Algoritmo de Detecção de Tecla
-
-```cpp
-// Escaneamento column-by-column com debounce
-for cada coluna:
-  - Coloca coluna em LOW
-  - Lê todas as linhas
-  - Se linha está em LOW → tecla pressionada
-  - Aguarda 50ms e confirma
-  - Aguarda liberação da tecla
-```
 
 ### Renderização na TV
 
@@ -194,43 +169,24 @@ for cada coluna:
 - **Delay de digitação**: 50ms (personalizável)
 - **Protocolo**: TVout (geração de sinal NTSC)
 
+
 ### Gerenciamento de Memória
 
 - Sem malloc/new
 - Arrays estáticos
 - Otimizado para 8KB de SRAM do ATmega 2560
 
----
-
-## 🎨 Estética & Inspiração
-
-O projeto foi inspirado na estética **Macintosh clássico (1984)**:
-- ✨ Monitor monocromático pequeno
-- ⌨️ Teclado vintage (calculadora)
-- 📟 Interface simplista e retrô
-- 🔔 Feedback sonoro das era 80
-
-Perfeito para aqueles que amam **retrocomputação** e **design vintage**! 🕰️
-
----
 
 ## 🚧 Roadmap / Melhorias Futuras
 
 - [ ] Implementar calculadora funcional completa
-- [ ] Adicionar comando de efeitos visuais
 - [ ] Persistência de dados (EEPROM)
-- [ ] Modo de programação/scripting simples
-- [ ] Suporte a múltiplas fontes
-- [ ] Menu de configurações
-- [ ] PCB personalizada para simplificar wiring
 
----
 
-## 📸 Fotos & Vídeos
+## 📄 Licença
 
-*[Adicione fotos do seu Strawberry Computer aqui!]*
+Este projeto é licenciado sob a **MIT License** - veja o arquivo LICENSE para detalhes.
 
----
 
 ## 👨‍💻 Autor
 
@@ -239,42 +195,4 @@ Perfeito para aqueles que amam **retrocomputação** e **design vintage**! 🕰�
 - Projeto criado em: **12/08/2025**
 - Última modificação: **16/08/2025**
 
----
 
-## 📄 Licença
-
-Este projeto é licenciado sob a **MIT License** - veja o arquivo LICENSE para detalhes.
-
----
-
-## 🤝 Contribuições
-
-Encontrou um bug? Tem uma ideia? Abra uma **issue** ou envie um **pull request**!
-
----
-
-## 🔗 Referências & Inspiração
-
-- [TVout Library](https://github.com/ArminJo/TVout)
-- [Macintosh 1984](https://en.wikipedia.org/wiki/Macintosh_128K)
-- [Arduino Mega Pinout](https://www.arduino.cc/en/uploads/Main/ArduinoMega2560Rev3-Pinout.pdf)
-- Estética retrô dos anos 80
-
----
-
-## ⚠️ Notas Importantes
-
-- ⚡ Certifique-se de que a TV suporta NTSC (região USA/Japão)
-- 🔌 Use fonte estável para o Arduino (mínimo 2A)
-- 🎧 O buzzer pode ser bem alto - use com moderação
-- 🛠️ Este é um projeto experimental - estável mas em desenvolvimento
-
----
-
-**Bem-vindo ao Berry OS! 🍓** Volte com novas ideias nas férias!
-
-```
-> strawberry: /dev/berry/os
-> status: ready
-> awaiting input...
-```
