@@ -185,7 +185,7 @@ const byte rowPins[5] = {30, 33, 32, 34, 35};
 
 ## 📄 Licença
 
-Este projeto é licenciado sob a **MIT License** - veja o arquivo LICENSE para detalhes.
+Este projeto é licenciado sob a **MIT License** - veja o arquivo (LICENSE)[LICENSE] para detalhes.
 
 
 ## 👨‍💻 Autor
