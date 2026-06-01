@@ -11,7 +11,10 @@
 
 **Strawberry** é um projeto de computador vintage funcional que recria a experiência estética e prática dos computadores antigos, especialmente do Macintosh clássico. O projeto utiliza um **Arduino Mega (ATmega 2560)** como CPU, uma **miniTV de 5.5 polegadas** como monitor e uma **calculadora antiga** como teclado.
 
-O **Berry OS** (Strawberry Operating System) é o software responsável por gerenciar a entrada do teclado, processar comandos e exibir a saída na tela, mantendo toda a atmosfera retrô viva.
+O **Berry OS** (Strawberry Operating System) é o software responsável por gerenciar a entrada do teclado, processar comandos e exibir a saída na tela.
+
+<img src="assets/strawberry-pc.jpeg" width="250">
+<img src="assets/strawberry-pc-2.jpeg" width="333">
 
 ### ⚙️ Especificações de Hardware
 
@@ -37,7 +40,7 @@ Perfeito para aqueles que amam **retrocomputação** e **design vintage**! 🕰�
 
 ## 🚀 Funcionalidades
 
-### Berry OS v1.0
+### Berry OS v2.0
 
 - ✅ Interpretação de entrada do teclado (calculadora)
 - ✅ Renderização em tempo real na TV (128x96)
@@ -46,6 +49,7 @@ Perfeito para aqueles que amam **retrocomputação** e **design vintage**! 🕰�
 - ✅ Feedback sonoro (buzzer)
 - ✅ Limpeza de tela com `ON`/`OFF`
 - ✅ Suporte a funções de calculadora (%, /, +, -, ×, =, etc)
+- ✅ Salva e exclui os resultados na memória EEPROM (MRC, M+, M-)
 
 
 ### KeyMap
@@ -85,7 +89,7 @@ Arquivo para testar a leitura da matriz de teclado em isolamento.
 
 - **Arduino IDE** (versão 1.8.x ou superior)
 - **Biblioteca TVout** (https://github.com/ArminJo/TVout)
-- **Arduino Mega** ou compatível
+- **Arduino Mega** ou compatível. Verifique as especificações da biblioteca TVOUT
 - Hardware montado: TV, teclado matriz, buzzer
 
 ### Setup
@@ -124,7 +128,7 @@ Ao pressionar `→`, será exibido:
 
 ```
 ---------------
-Strawberry v1.0
+Strawberry v2.0
 ---------------
 CPU    :ATmega
 Board  :Arduino
@@ -193,6 +197,6 @@ Este projeto é licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICE
 **Francisco Passos** (Frank)
 - GitHub: [@FrankSteps](https://github.com/FrankSteps)
 - Projeto criado em: **12/08/2025**
-- Última modificação: **16/08/2025**
+- Última modificação: **29/05/2026**
 
 
