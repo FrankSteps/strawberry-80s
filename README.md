@@ -13,8 +13,7 @@
 
 O **Berry OS** (Strawberry Operating System) é o software responsável por gerenciar a entrada do teclado, processar comandos e exibir a saída na tela.
 
-<img src="assets/strawberry-pc.jpeg" width="250">
-<img src="assets/strawberry-pc-2.jpeg" width="333">
+<img src="assets/strawberry-pc.jpeg" width="250"> <img src="assets/strawberry-pc-2.jpeg" width="333">
 
 ### ⚙️ Especificações de Hardware
 
