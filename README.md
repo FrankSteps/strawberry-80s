@@ -105,10 +105,10 @@ Arquivo para testar a leitura da matriz de teclado em isolamento.
 
 4. **Faça upload**:
 
-5. **Pronto!** 🍓
+5. **Pronto!**
    - A TV deve ligar
    - O buzzer emitirá 3 sons de confirmação
-   - Digite na calculadora para ver os caracteres na TV
+   - Digite na calculadora para ver os caracteres na TV e use como uma calculadora
 
 
 ## 🎮 Como Usar
@@ -180,12 +180,6 @@ const byte rowPins[5] = {30, 33, 32, 34, 35};
 - Otimizado para 8KB de SRAM do ATmega 2560
 
 
-## 🚧 Roadmap / Melhorias Futuras
-
-- [ ] Implementar calculadora funcional completa
-- [ ] Persistência de dados (EEPROM)
-
-
 ## 📄 Licença
 
 Este projeto é licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
@@ -196,6 +190,6 @@ Este projeto é licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICE
 **Francisco Passos** (Frank)
 - GitHub: [@FrankSteps](https://github.com/FrankSteps)
 - Projeto criado em: **12/08/2025**
-- Última modificação: **29/05/2026**
+- Última modificação: **01/06/2026**
 
 
